@@ -14,12 +14,10 @@ namespace Ucu.Poo.Restaurant
         {
             dishes.Add(dish);
         }
-
         public void RemoveDish(Dish dish)
         {
             dishes.Remove(dish);
         }
-
         public Dish GetDishByName(string dishName)
         {
             foreach (var dish in dishes)

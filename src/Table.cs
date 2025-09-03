@@ -37,5 +37,16 @@ namespace Ucu.Poo.Restaurant
         {
             return this.order.Count > 0;
         }
+
+        public void Occupy()
+        {
+            this.IsOccupied = true;
+        }
+
+        public void Free()
+        {
+            this.IsOccupied = false;
+            order.Clear();
+        }
     }
 }

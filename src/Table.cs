@@ -32,21 +32,28 @@ namespace Ucu.Poo.Restaurant
             }
         }
         private List<Dish> order = new List<Dish>();
-        
-        public bool HasOrders()
-        {
-            return this.order.Count > 0;
-        }
 
+        public Table(int number, bool isOccupied = false)
+        {
+            this.Number = number;
+            this.IsOccupied = isOccupied;
+        }
         public void Occupy()
         {
             this.IsOccupied = true;
         }
-
         public void Free()
         {
             this.IsOccupied = false;
             order.Clear();
+        }
+        public void AddToOrder(Dish dish)
+        {
+            order.Add(dish);
+        }
+        public bool HasOrders()
+        {
+            return this.order.Count > 0;
         }
     }
 }

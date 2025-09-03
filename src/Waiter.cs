@@ -8,14 +8,17 @@ namespace Ucu.Poo.Restaurant
     public class Waiter
     {
         private List<Table> assignedTables = new List<Table>();
-
         private string name;
         public string Name
         {
             get { return this.name; }
             set { this.name = value; }
         }
-        
+
+        public Waiter(string name)
+        {
+            this.Name = name;
+        }
         public void AssignTable(Table table)
         {
             assignedTables.Add(table);

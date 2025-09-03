@@ -12,15 +12,14 @@ namespace Ucu.Poo.Restaurant
         private string name;
         public string Name
         {
-            get { return name; }
+            get { return this.name; }
             set { this.name = value; }
         }
-
+        
         public void AssignTable(Table table)
         {
             assignedTables.Add(table);
         }
-
         public void TakeOrder(Table table, Dish dish)
         {
             table.AddToOrder(dish);

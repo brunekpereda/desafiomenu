@@ -14,17 +14,15 @@ namespace Ucu.Poo.Restaurant
         {
             dishes.Add(dish);
         }
-
         public void RemoveDish(Dish dish)
         {
             dishes.Remove(dish);
         }
-
-        Dish GetDishByName(string dishname)
+        public Dish GetDishByName(string dishName)
         {
             foreach (var dish in dishes)
             {
-                if (dishname == dish.Name)
+                if (dishName == dish.Name)
                 {
                     return dish;
                 }

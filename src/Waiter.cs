@@ -12,7 +12,7 @@ namespace Ucu.Poo.Restaurant
         private string name;
         public string Name
         {
-            get { return name; }
+            get { return this.name; }
             set { this.name = value; }
         }
 

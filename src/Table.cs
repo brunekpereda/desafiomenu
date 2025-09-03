@@ -7,8 +7,32 @@ namespace Ucu.Poo.Restaurant
     /// </summary>
     public class Table
     {
+        private int number;
+        public int Number
+        {
+            get
+            {
+                return this.number;
+            }
+            set
+            {
+                this.number = value;
+            }
+        }
+        private bool isOccupied;
+        public bool IsOccupied
+        {
+            get
+            {
+                return this.isOccupied;
+            }
+            set
+            {
+                this.isOccupied = value;
+            }
+        }
         private List<Dish> order = new List<Dish>();
-
+        
         public bool HasOrders()
         {
             return this.order.Count > 0;
